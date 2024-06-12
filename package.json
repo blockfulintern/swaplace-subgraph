@@ -1,18 +1,16 @@
 {
-  "name": "subgraph-sepolia-testnet",
-  "license": "UNLICENSED",
+  "name": "swaplace-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
   "scripts": {
-    "codegen": "graph codegen",
-    "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ subgraph-sepolia-testnet",
-    "create-local": "graph create --node http://localhost:8020/ subgraph-sepolia-testnet",
-    "remove-local": "graph remove --node http://localhost:8020/ subgraph-sepolia-testnet",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 subgraph-sepolia-testnet",
-    "test": "graph test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.64.0",
-    "@graphprotocol/graph-ts": "0.32.0"
-  },
-  "devDependencies": { "matchstick-as": "0.5.0" }
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
 }
