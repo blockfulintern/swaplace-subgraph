@@ -12,3 +12,5 @@
 
 # Typechains assists with type safety when interacting with contracts.
 /typechain-types
+
+yarn.lock
