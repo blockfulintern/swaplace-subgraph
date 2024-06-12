@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
-import { getRanking } from "./services/databaseQueries.ts";
+import { getUserRanking } from "./services/databaseQueries";
 
 dotenv.config();
 
@@ -26,7 +26,7 @@ app.get("/ranking", async (req, res) => {
       return res.status(400).send("Invalid score parameter");
     }
     try {
-      const result = await getRanking(userScore);
+      const result = await getUserRanking(userScore);
       res.status(200).json({ total_count: result.rows[0].total_count });
     } catch (error) {
       console.error("Error fetching ranking:", error);

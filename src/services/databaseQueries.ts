@@ -1,6 +1,6 @@
-import { pool } from "./databaseConnection.ts";
+import { pool } from "./databaseConnection";
 
-export const getRanking = async (userScore: number): Promise<any> => {
+export const getUserRanking = async (userScore: number): Promise<any> => {
   try {
     const result = await pool.query(
       'SELECT COUNT(id) AS total_count FROM "ProfileDatabase" WHERE "totalScore" > $1;',
