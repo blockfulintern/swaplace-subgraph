@@ -71,7 +71,7 @@ ponder.on("Swaplace:SwapCreated", async ({ event, context }) => {
           allowed: swap.allowed,
           expiry: swap.expiry,
           recipient: swap.recipient,
-          value: swap.recipient,
+          value: swap.value,
           bid: swap.bid,
           ask: swap.ask,
         },
