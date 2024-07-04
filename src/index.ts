@@ -9,7 +9,8 @@ const app: Express = express();
 const port = process.env.PORT || 3002;
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://app.swaplace.xyz, https://sepolia-rpc.kakarot.org",
+  "https://app.swaplace.xyz",
+  "https://sepolia-rpc.kakarot.org",
   "https://swaplace-ponder-production.up.railway.app",
 ];
 
