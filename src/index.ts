@@ -1,27 +1,26 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { getUserRanking } from "./services/databaseQueries";
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3002;
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://app.swaplace.xyz, https://sepolia-rpc.kakarot.org",
+  "https://swaplace-ponder-production.up.railway.app",
+];
+
+const corsOptions = {
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
-
-app.use(function (req, res, next) {
-  //res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader("Access-Control-Allow-Origin", "https://app.swaplace.xyz");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Access-Control-Allow-Headers"
-  );
-  next();
-});
 
 app.get("/ranking", async (req, res) => {
   if (typeof req.query.score === "string") {
