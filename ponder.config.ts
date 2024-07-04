@@ -5,10 +5,10 @@ import { SwaplaceAbi } from "./abis/SwaplaceAbi";
 
 export default createConfig({
   networks: {
-    // sepolia: {
-    //   chainId: 11155111,
-    //   transport: http(process.env.ALCHEMY_RPC_URL),
-    // },
+    sepolia: {
+      chainId: 11155111,
+      transport: http(process.env.ALCHEMY_RPC_URL),
+    },
     kakarot_sepolia: {
       chainId: 1802203764,
       transport: http(process.env.KAKAROT_SEPOLIA_RPC_URL),
@@ -42,10 +42,10 @@ export default createConfig({
     Swaplace: {
       abi: SwaplaceAbi,
       network: {
-        // sepolia: {
-        //   address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
-        //   startBlock: 6107909,
-        // },
+        sepolia: {
+          address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
+          startBlock: 6107909,
+        },
         kakarot_sepolia: {
           address: "0x12Fe1E060B0B1c4Efc6d7A8dC9394ffC53842b78",
           startBlock: 10346,
