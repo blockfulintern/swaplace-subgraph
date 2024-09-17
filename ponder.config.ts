@@ -21,10 +21,10 @@ export default createConfig({
       chainId: 11155420,
       transport: http(process.env.OPSEPOLIA_RPC_URL),
     },
-    fuji: {
-      chainId: 43113,
-      transport: http(process.env.FUJI_RPC_URL),
-    },
+    // fuji: {
+    //   chainId: 43113,
+    //   transport: http(process.env.FUJI_RPC_URL),
+    // },
     base_sepolia: {
       chainId: 84532,
       transport: http(process.env.BASESEPOLIA_RPC_URL),
@@ -58,10 +58,10 @@ export default createConfig({
           address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
           startBlock: 13295338,
         },
-        fuji: {
-          address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
-          startBlock: 34124607,
-        },
+        // fuji: {
+        //   address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
+        //   startBlock: 34124607,
+        // },
         base_sepolia: {
           address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
           startBlock: 11318526,
