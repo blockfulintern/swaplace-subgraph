@@ -37,6 +37,24 @@ export default createConfig({
       chainId: 421614,
       transport: http(process.env.ARBITRUMSEPOLIA_RPC_URL),
     },
+
+    // Mainnet networks
+    opmtism: {
+      chainId: 10,
+      transport: http(process.env.OP_RPC_URL),
+    },
+    arbitrumOne: {
+      chainId: 42161,
+      transport: http(process.env.ARB_RPC_URL),
+    },
+    base: {
+      chainId: 8453,
+      transport: http(process.env.BASE_RPC_UR),
+    },
+    polygon_pos: {
+      chainId: 137,
+      transport: http(process.env.MATIC_RPC_URL),
+    },
   },
   contracts: {
     Swaplace: {
@@ -73,6 +91,24 @@ export default createConfig({
         arbitrum_sepolia: {
           address: "0x7819d778dB1b5309dfcbe1A67553aC89Ae1cA53f",
           startBlock: 54752822,
+        },
+
+        // Mainnet networks
+        opmtism: {
+          address: "0x1F501af9a03A10DF4E2525085b2B3a487934a30c",
+          startBlock: 125846533,
+        },
+        arbitrumOne: {
+          address: "0x1F501af9a03A10DF4E2525085b2B3a487934a30c",
+          startBlock: 257300496,
+        },
+        base: {
+          address: "0x1F501af9a03A10DF4E2525085b2B3a487934a30c",
+          startBlock: 20251382,
+        },
+        polygon_pos: {
+          address: "0x1F501af9a03A10DF4E2525085b2B3a487934a30c",
+          startBlock: 62269636,
         },
       },
     },
